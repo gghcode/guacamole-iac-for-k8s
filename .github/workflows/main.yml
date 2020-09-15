@@ -1,0 +1,8 @@
+on: [push]
+name: Actions CI Workflow
+jobs:
+  "Build":
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build -t gghcode/guacamole-pg-initsql .
